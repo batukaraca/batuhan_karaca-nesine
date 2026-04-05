@@ -24,6 +24,18 @@
                 border-left: 1px solid rgb(93, 93, 93);
                 padding: 8px;
                 flex: 1;
+                cursor: pointer;
+
+                &--selected {
+                    background-color: yellow;
+                    font-weight: bold;
+                    cursor: pointer;
+                }
+
+                &--empty {
+                    cursor: default;
+                    pointer-events: none;
+                }
             }
             &:first-child {
                 .bets-container__inside-header,
@@ -51,4 +63,35 @@
 
 .tac {
     text-align: center;
+}
+
+.bet-cart {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    background: #fff;
+    border: 2px solid rgb(93, 93, 93);
+    z-index: 100;
+
+    &__list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        max-height: 200px;
+        overflow-y: auto;
+    }
+
+    &__item {
+        display: flex;
+        gap: 16px;
+        padding: 6px 16px;
+        border-bottom: 1px solid #eee;
+        font-size: 13px;
+    }
+
+    &__total {
+        padding: 8px 16px;
+        font-size: 16px;
+        border-top: 1px solid #ccc;
+    }
 }

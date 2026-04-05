@@ -30,3 +30,10 @@ export interface OC {
   OD: number;
   IMF: boolean;
 }
+
+export interface SelectedBet {
+  nid: string;
+  ocgId: string;
+  ocId: string;
+  odds: string;
+}
